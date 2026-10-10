@@ -11,6 +11,8 @@
 - Flag changes that weaken the required encryption or bypass the intended CONNECT or CONNECT-UDP (MASQUE) proxy path for traffic that should be protected.
 - Flag insecure fallback behavior that sends qualifying traffic directly without an explicit, documented reason.
 - Distinguish intentional fail-open behavior from an accidental privacy bypass.
+- Review error paths, retries, redirects, tunnel establishment and teardown, and proxy failover for unintended direct connections or disclosure of the client's original IP.
+- Verify that protected traffic remains protected during partial failures and state transitions, unless a documented and explicitly permitted exception applies.
 
 ### 3. Domain-list and context enforcement
 - Flag changes that cause Masked Domain List (MDL) domains to bypass protection in third-party contexts when IP Protection should apply.
